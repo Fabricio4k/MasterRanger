@@ -1,0 +1,29 @@
+#!/bin/bash 
+
+echo "           ┏━━━━━━━━━━━━━━━┓
+┏━━━━━━━━━━┫ Master Ranger ┣━━━━━━━━━━━┓
+┃                                      ┃
+┣>> 1 CRIAR LISTA DE IP                ┃
+┃                                      ┃
+┣>> 2 TESTAR LISTA                     ┃
+┃                                      ┃
+┃                                      ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+"
+read menu
+
+if [ $menu == "1" ]
+then
+echo "
+Digite seu range 
+exemplo:
+104.16.0.0.0/16
+"
+read ip
+mapcidr -cidr ip -o ips.txt 
+
+elif [ $menu == "2" ]
+then
+httpx -list ips.txt -stats -method -sc -websocket -cname -server -title -asn -td -probe -o ok.txt
+fi
+
