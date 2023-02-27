@@ -17,7 +17,7 @@ then
 echo "
 Digite seu range 
 exemplo:
-104.16.0.0.0/16
+104.16.0.0/16
 "
 read ip
 mapcidr -cidr ip -o ips.txt 
