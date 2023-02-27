@@ -112,6 +112,7 @@ clear
 echo "INSTALANDO Master Ranger"
 sleep 4
 mv Ranger /data/data/com.termux/files/usr/bin 
+sleep 5
 chmod +rwx Ranger 
 clear
 echo -e "$yellow Master Ranger instalado com sucesso $cyan digite Ranger para iniciar "
